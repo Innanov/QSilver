@@ -1,0 +1,19 @@
+\documentclass[11pt]{standalone}
+\usepackage{qcircuit}
+\usepackage{amssymb,amsmath,mathtools}
+\usepackage{physics}
+
+\begin{document}
+\newcommand{\gdotext}{\parbox{1.7cm}{\centering Grover\\diffusion\\operator}}
+\vspace*{3ex}
+
+
+$$\hspace{1em} \mbox{\(\Qcircuit @C=1em @R=.7em {
+  \lstick{\ket{0}}  & \gate{H} & \multigate{3}{\mbox{oracle}} & \multigate{3}{\gdotext} & \qw & \cdots & & \meter & \cw \\
+  \lstick{\ket{0}}  & \gate{H} & \ghost{\mbox{oracle}} & \ghost{\gdotext} & \qw & \cdots & & \meter & \cw \\
+\lstick{\ket{0}}  & \gate{H} & \ghost{\mbox{oracle}} & \ghost{\gdotext} & \qw & \cdots & & \meter & \cw \\
+  \lstick{\ket{0}}  & \gate{H} & \ghost{\mbox{oracle}} & \ghost{\gdotext} & \qw & \cdots & & \meter & \cw \\
+ }\)}\hspace{1ex}$$
+
+
+\end{document}
